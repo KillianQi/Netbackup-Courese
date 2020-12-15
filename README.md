@@ -5,7 +5,7 @@
 
 3.The project may contain errors, please execute the relevant commands and configurations in the production environment according to your own production environments, neither I nor the Veritas NetBackup vendor will be held responsible for any accidents caused by the errors in this project.
 
-==================
+#############################
 
 1.该项目为本人在学习及工作中使用Veritas NetBackup软件时的记录，其中可能包含安装，配置，报错记录以及错误处理等；
 
