@@ -1,0 +1,104 @@
+010.使用NBU恢复VMWare 虚拟机（原位置恢复）
+
+# 1.模拟虚拟机故障宕机
+
+![20210107171646](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107171646.png)
+
+
+**此次测试中将虚拟机恢复至原位置，保留恢复之前的所有设置，恢复之前已在VC中移除相关虚拟机**
+
+
+# 2.在NBU Console中，打开BAR选项卡
+
+![20210107171924](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107171924.png)
+
+
+**在BAR选项卡中，选择Restore Files，并指定Restore Type为Virtual Machine Backups**
+
+
+# 3.选择恢复策略为虚拟机备份后，点击右上角的手指按钮，按需求选择
+
+
+![20210107172412](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107172412.png)
+
+
+
+```
+
+# 通常，在进行恢复的操作时，需要指定以下内容
+
+Server to use for backups and restores  用于备份恢复的服务器，通常选择为备份数据所存放的Media Server
+Source client for restores              指定恢复的源，即被恢复的服务器
+Destination client for restore          指定恢复的目标，通常文件恢复可选择其他位置
+Policy type for restore                 恢复的策略类型，视情况而定
+
+```
+
+# 4.点击右侧日历图标选择需要恢复的日期以及备份镜像
+
+![20210107173354](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107173354.png)
+
+
+## 4.1选择指定恢复日期
+
+![20210107173504](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107173504.png)
+
+**选择某一时间范围内或具体某一天的具体时刻，选择完成后点击OK**
+
+## 4.2选择指定的备份镜像
+
+![20210107173635](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107173635.png)
+
+
+**选择指定具体的备份镜像，点击OK确认**
+
+
+# 5.观察窗口的变化，在Directory Structure中选择需要恢复的虚拟机，在右侧Contents中选择相应日期的备份镜像
+
+![20210107173900](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107173900.png)
+
+
+**此处若无任何内容显示，先确定Browse Directory中输入 / 再进行筛选**
+
+# 6.确认以上步骤完成后，点击右下角Restore按钮，进行恢复操作
+
+## 6.1开始恢复操作
+
+![20210107174243](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107174243.png)
+
+**按照需求选择恢复到原位置或其他位置（本次测试恢复到原位置，且原位置下原虚拟机已删除）**
+
+## 6.2恢复选项确认，并指定网络传输方式
+
+![20210107174423](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107174423.png)
+
+**按照自己到需求，选择网络传输方式或其优先级（排列越高越优先）**
+
+## 6.3针对虚拟机恢复的配置选项
+
+![20210107174829](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107174829.png)
+
+
+```
+
+虚拟机选项中，由上到下依次为
+
+恢复原虚拟机的BIOS UUID而不是新建一个BIOS UUID
+恢复原虚拟机的Instance UUID而不是新建一个Instance UUID
+覆盖相同的虚拟机
+移除类似DVD/CD驱动器，串口，并口等后端设备信息
+移除网络设置
+移除标签
+恢复虚拟机后打开电源
+提高优先级（数值越大优先级越高）
+
+```
+
+## 6.4执行恢复前检查
+
+![20210107175433](https://raw.githubusercontent.com/KillianQi/KillianQi-Killian-Private-Image/main/img/20210107175433.png)
+
+**检查全部通过后，点击Start Recovery开始恢复**
+
+
+# 7.观察恢复过程
