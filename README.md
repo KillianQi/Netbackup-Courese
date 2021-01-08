@@ -6,3 +6,4 @@
 **3.The project may contain errors, please execute the relevant commands and configurations in the production environment according to your own production environments, neither I nor the Veritas NetBackup vendor will be held responsible for any accidents caused by the errors in this project.**
 
 
+**本文档中所有图片均已上传至Github图床，若文档中图片无法打开，请自行修改Hosts文件**
